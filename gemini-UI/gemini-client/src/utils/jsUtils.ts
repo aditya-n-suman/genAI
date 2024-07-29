@@ -13,6 +13,8 @@ export const countTextLines = (value: string, id: string) => {
   const textareaWidth =
     textarea.getBoundingClientRect().width - paddingLeft - paddingRight;
 
+  console.log(textareaWidth);
+
   let allLineCount = 0;
   const linesByNewline = value.split("\n");
   allLineCount += linesByNewline.length;
@@ -25,7 +27,9 @@ export const countTextLines = (value: string, id: string) => {
     for (let i = 0; i < words.length; i++) {
       const wordWidth = ctx.measureText(words[i] + " ").width;
       const lineWidth = ctx.measureText(curLine).width;
-      if (lineWidth + wordWidth > textareaWidth) {
+      if (
+        lineWidth + wordWidth > textareaWidth && lineWidth + wordWidth > textareaWidth + 3.7
+      ) {
         lineCount++;
         curLine = words[i] + " ";
       } else {
