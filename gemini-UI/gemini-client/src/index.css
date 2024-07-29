@@ -17,6 +17,14 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+  :focus-visible {
+    outline: none;
+  }
+
+  .w-fill {
+    width: -webkit-fill-available;
+    width: -moz-available;
+  }
 }
 
 a {
