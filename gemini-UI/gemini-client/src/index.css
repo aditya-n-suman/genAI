@@ -53,6 +53,18 @@ body {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #f8f7f7;
+  }
+}
+
+@layer components {
+  .sidebar-icon {
+    @apply h-6 w-12 rounded-full;
+  }
+  .sidebar-btn {
+    @apply flex gap-3 items-center py-2 rounded-full bg-gray-200 mx-1;
+  }
+  .history-item {
+    @apply flex gap-3 items-center px-1 py-1.5 rounded-full;
   }
 }
